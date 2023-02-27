@@ -85,6 +85,7 @@ def make_dirs(dst, list_dirs):
 		print(f'CREATED FOLDER: {d}')
 		os.makedirs(os.path.join(dst, d), exist_ok=True)
 
+print("hello")
 
 def main(files, root, dst):
 	make_dirs(dst, [DST_SPEC, DST_MELSPECS, DST_MFCC])
