@@ -11,7 +11,8 @@ from dataset import AudioDataset
 from torchaudio.transforms import MelSpectrogram, MFCC
 from torchsummary import summary
 
-from cnn import CNNNetwork
+from models.cnn import CNNNetwork
+from models.test import Vggish
 
 
 def read_configs(path):
@@ -89,7 +90,7 @@ def main(src_dir, train_labels_path, test_labels_path, transforms):
 	# print(f'{num_classes} , {input_shape}')
 
 	# define network
-	cnn = CNNNetwork(2304, 10).to(device)
+	cnn = Vggish(10).to(device)
 
 	# define optimiser and loss function
 	loss_fn = torch.nn.CrossEntropyLoss()

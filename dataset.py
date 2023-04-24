@@ -27,7 +27,7 @@ class AudioDataset(Dataset):
 		audio_path = os.path.join(self.src_dir, self.labels.iloc[idx, 0])
 		label = self.labels.iloc[idx, 1]
 
-		signal, sr = load_audio(audio_path, normalize=True)
+		signal, sr = load_audio(audio_path)
 		signal = signal.to(self.device)
 		signal = self._resample_if_necessary(signal, sr)
 		signal = self._mix_down_if_necessary(signal)
