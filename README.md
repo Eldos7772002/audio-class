@@ -35,3 +35,4 @@ optional arguments:
   --configs_path CONFIGS_PATH
                         [input] configs_path
 ```
+![image](https://user-images.githubusercontent.com/82103717/236277386-4762a11b-43fb-4175-8628-d0d6d6fcfec9.png)
